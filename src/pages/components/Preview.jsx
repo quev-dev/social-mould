@@ -40,15 +40,15 @@ export default function Preview ({
           {bio}
         </p>
         <ul className="flex flex-row gap-4">
-          <li><a href="">
+          <li><a className="inactive" href="">
             <img src={icLink} alt="" className="inline relative -translate-y-0.5 mr-1"/>
             Twitter
           </a></li>
-          <li><a href="">
+          <li><a className="inactive" href="">
             <img src={icLink} alt="" className="inline relative -translate-y-0.5 mr-1"/>
             Instagram
           </a></li>
-          <li><a href="">
+          <li><a className="inactive" href="">
             <img src={icLink} alt="" className="inline relative -translate-y-0.5 mr-1"/>
             YouTube
           </a></li>

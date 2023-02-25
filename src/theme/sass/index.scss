@@ -118,3 +118,7 @@ body {
   background-image: url('../images/content/bg-waves.svg');
   box-shadow: 0px 4px 8px $color-shadow;
 }
+
+.inactive {
+  pointer-events: none;
+}
