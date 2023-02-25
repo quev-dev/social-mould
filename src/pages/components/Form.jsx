@@ -1,7 +1,6 @@
 import icPalette    from '../../theme/images/icons/palette.svg';
 import icSearch     from '../../theme/images/icons/search.svg';
 import icUnsplash   from '../../theme/images/icons/unsplash.svg';
-import icCheck      from '../../theme/images/icons/check.svg';
 
 import Preview  from './Preview.jsx';
 import Download from './Download.jsx';
