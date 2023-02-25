@@ -338,8 +338,8 @@ export default function Form() {
       /> 
       }
       { formSubmitted && <Download
-        downloadUrlPortrait={fetchData[selectedPortrait].links.download_location}
-        downloadUrlBanner={fetchDataBanner[selectedBanner].links.download_location}
+        downloadUrlPortrait={fetchData[selectedPortrait].links.download}
+        downloadUrlBanner={fetchDataBanner[selectedBanner].links.download}
         textToCopy={bio}
       /> }
     </section>
