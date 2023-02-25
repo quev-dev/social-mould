@@ -13,7 +13,7 @@ import { createApi } from 'unsplash-js';
 
 import generateBio from '../../tools/bios.js';
 
-const UNSPLASH_ACCESS_KEY = process.env.VITE_UNSPLASH_ACCESS_KEY;
+const UNSPLASH_ACCESS_KEY = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 const unsplash = createApi({
   accessKey: UNSPLASH_ACCESS_KEY,
 });
