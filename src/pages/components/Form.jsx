@@ -182,9 +182,9 @@ export default function Form() {
           ">
             { fetchData.map((item, index) => (
               <div key={item.id} className="
-              unsplash-image-container flex animate__animated animate__fadeIn
+              unsplash-image-container flex flex-col animate__animated animate__fadeIn
               ">
-                <section className="flex flex-col text-center justify-center items-center">
+                <section className="unsplash-image-container-2 flex flex-col text-center justify-center items-center">
                   <img src={item.urls.regular} alt={item.description} className="unsplash-image-preview
                   animate__animated animate__rotateIn animate__fast"
                   />
@@ -193,14 +193,16 @@ export default function Form() {
                     {item.user.name}
                   </a>
                   <div className="image-select-zone">
-                    <input type="radio"
-                      name="selectedPortrait"
-                      id={item.id}
-                      value={item.id}
-                      checked={selectedPortrait === index}
-                      onChange={() => setSelectedPortrait(index)}
-                    />
                   </div>
+                </section>
+                <section className="m-2 p-2 flex flex-col items-center">
+                  <input type="radio"
+                    name="selectedPortrait"
+                    id={item.id}
+                    value={item.id}
+                    checked={selectedPortrait === index}
+                    onChange={() => setSelectedPortrait(index)}
+                  />
                 </section>
               </div>
             ))}
@@ -250,9 +252,9 @@ export default function Form() {
           ">
             { fetchDataBanner.map((bannerItem, bannerIndex) => (
                 <div key={bannerItem.id} className="
-                unsplash-banner-container flex animate__animated animate__fadeIn
+                unsplash-banner-container flex flex-col animate__animated animate__fadeIn
                 ">
-                  <section className="flex flex-col text-center justify-center items-center">
+                  <section className="unsplash-image-container-2 flex flex-col text-center justify-center items-center">
                     <img src={bannerItem.urls.regular} alt={bannerItem.description} className="unsplash-banner-preview
                     animate__animated animate__fadeIn animate__fast
                     "/>
@@ -261,14 +263,16 @@ export default function Form() {
                       {bannerItem.user.name}
                     </a>
                     <div className="image-select-zone">
-                      <input required type="radio"
-                        name="selectedBanner"
-                        id={bannerItem.id}
-                        value={bannerItem.id}
-                        checked={selectedBanner === bannerIndex}
-                        onChange={() => setSelectedBanner(bannerIndex)}
-                      />
                     </div>
+                  </section>
+                  <section className="m-2 p-2 flex flex-col items-center">
+                    <input required type="radio"
+                      name="selectedBanner"
+                      id={bannerItem.id}
+                      value={bannerItem.id}
+                      checked={selectedBanner === bannerIndex}
+                      onChange={() => setSelectedBanner(bannerIndex)}
+                    />
                   </section>
                 </div>
             ))} 
