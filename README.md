@@ -12,6 +12,7 @@ This **web app** will **generate a professional social media profile** based off
 
 ### How it Works:
 ![Visual demonstration of website use](./public/gifDemo.gif)
+
 In the form, you'll want to provide the following information:
 * Desired username
 * Image for profile picture
