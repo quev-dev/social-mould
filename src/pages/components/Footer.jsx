@@ -33,7 +33,6 @@ export default function Footer() {
 
         <h5>NPM Packages</h5>
         <ul>
-          <li><a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/axios">Axios</a></li>
           <li><a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/react-animation-on-scroll">react-animation-on-scroll</a></li>
           <li><a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/react-router-dom">react-router-dom</a></li>
           <li><a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/react-scroll">react-scroll</a></li>
