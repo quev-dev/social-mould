@@ -113,18 +113,33 @@ export default function Form() {
   }
 
   // 'target', 'profile', 'banner', 'interest'
-  function handleSubmit(event) {
-
+  async function handleSubmit(event) {
     event.preventDefault();
-
-    if(selectedPortrait !== '' && selectedBanner !== ''){
+  
+    if (selectedPortrait !== '' && selectedBanner !== '') {
       setFormSubmitted(true);
       setWarnUser(false);
+  
+      try {
+        const response1 = await fetch(`${fetchData[selectedPortrait].links.download_location}/?client_id=${UNSPLASH_ACCESS_KEY}`);
+        const response2 = await fetch(`${fetchDataBanner[selectedBanner].links.download_location}/?client_id=${UNSPLASH_ACCESS_KEY}`);
+  
+        // If the response status is OK (200-299), the download is successful.
+        if (response1.ok && response2.ok) {
+          console.log('Unsplash API downloads successfully triggered.');
+          console.log(`${fetchData[selectedPortrait].links.download_location}/?client_id=${UNSPLASH_ACCESS_KEY}`);
+          console.log(`${fetchDataBanner[selectedBanner].links.download_location}/?client_id=${UNSPLASH_ACCESS_KEY}`);
+        } else {
+          console.log('ERR: API downloads failed.');
+        }
+      } catch (error) {
+        console.log('ERR: Could not get API download_location.', error);
+      }
     } else {
       setWarnUser(true);
     }
-
-  };
+  }
+  
 
   function interestChange (event) {
     setInterest(event.target.value);
@@ -189,9 +204,18 @@ export default function Form() {
                   animate__animated animate__rotateIn animate__fast"
                   />
                   <h6 className="text-center">Author:</h6>
-                  <a rel="noreferrer" target="_blank" href={item.user.links.html}>
-                    {item.user.name}
-                  </a>
+
+                  <span>
+                    <a rel="noreferrer" target="_blank" 
+                    href={`${item.user.links.html}?utm_source=SocialMould&utm_medium=referral`}>
+                      {`${item.user.name} `}
+                    </a>
+                    {`on `}
+                    <a rel="noreferrer" target="_blank" href="https://unsplash.com/?utm_source=SocialMould&utm_medium=referral">
+                      Unsplash
+                    </a>
+                  </span>
+
                   <div className="image-select-zone">
                   </div>
                 </section>
@@ -259,9 +283,18 @@ export default function Form() {
                     animate__animated animate__fadeIn animate__fast
                     "/>
                     <h6 className="text-center">Author:</h6>
-                    <a rel="noreferrer" target="_blank" href={bannerItem.user.links.html}>
-                      {bannerItem.user.name}
-                    </a>
+
+                    <span>
+                      <a rel="noreferrer" target="_blank" 
+                      href={`${bannerItem.user.links.html}?utm_source=SocialMould&utm_medium=referral`}>
+                        {`${bannerItem.user.name} `}
+                      </a>
+                      {`on `}
+                      <a rel="noreferrer" target="_blank" href="https://unsplash.com/?utm_source=SocialMould&utm_medium=referral">
+                        Unsplash
+                      </a>
+                    </span>
+
                     <div className="image-select-zone">
                     </div>
                   </section>
