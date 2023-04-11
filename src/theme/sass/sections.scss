@@ -1,0 +1,100 @@
+@import './variables.scss';
+
+#sec-header {
+  height: 100vh;
+  color: $color-light;
+  background-size: cover;
+  background-image:
+    linear-gradient(to right, rgba(34, 0, 44, 0.37), rgba(40, 0, 18, 0.644)),
+    url('../images/content/bg-screens-blur.jpg');
+  box-shadow: 0px 4px 4px $color-shadow;
+}
+#header-button {
+  border: none;
+  background: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  scale: 150%;
+}
+#header-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+#header-button::before {
+  background: none;
+}
+
+#form-container {
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 4px solid rgba(255, 0, 225, 0.1);
+  border-radius: 2em;
+  box-shadow: 0px 4px 4px $color-shadow;
+
+  transition: width $transition-time;
+  transition-timing-function: ease;
+}
+
+#sec-download {
+  border-radius: 2em;
+  padding: 2em;
+  box-shadow: 0px 4px 4px $color-shadow;
+  background-size: cover;
+  background-position: bottom;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(206, 164, 255, 0.5)),
+    url('../images/content/bg-triangles.svg');
+}
+
+#sec-footer {
+  color: $color-light;
+  background-image:
+  linear-gradient(to left, rgba(26, 0, 19, 0.8), rgba(15, 0, 28, 0.8)),
+  url('../images/content/bg-screens-blur.jpg');
+
+  aside, article {
+    width: 80%;
+    padding: 1em;
+    margin: 0.5em 0;
+
+    border: 2px solid rgba(255, 255, 255, 0.1);;
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  box-shadow: 0px -4px 4px $color-shadow;
+}
+
+#preview-container {
+  position: relative;
+
+  padding: 1em;
+  width: 100%;
+  min-height: 5em;
+  box-shadow: 0px 4px 4px $color-shadow;
+
+  border: 4px solid rgba(255, 0, 225, 0.1);
+  
+  background-size: cover;
+  background-image: url('../images/content/bg-waves.svg');
+}
+#preview-portrait {
+  position: relative;
+  bottom: 5em;
+  margin-bottom: -5em;
+  margin-left: 1em;
+
+  border-radius: 100%;
+  border: 4px solid white;
+
+  object-fit: cover;
+  height: 7em;
+  width: 7em;
+}
+#preview-banner {
+  height: 12em;
+  width: 100%;
+  border-radius: 0.5em;
+  object-fit: cover;
+}
+#preview-button {
+  position: absolute;
+  right: 3.5em;
+}

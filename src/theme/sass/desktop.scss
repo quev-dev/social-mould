@@ -1,0 +1,50 @@
+
+$desktop: 768px;
+
+@media only screen and (min-width: $desktop) {
+
+  h1 {
+    font-size: 6em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+
+  #site-description {
+    font-size: 1.5em;
+  }
+
+  #sec-form {
+    padding-left: 4em;
+    padding-right: 4em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  #form-container {
+    border-radius: 1em;
+    padding: 2em;
+    min-width: 25em;
+  }
+
+  #sec-preview {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+  #preview-container {
+    padding: 2em;
+    border-radius: 2em;
+  }
+  #preview-portrait {
+    height: 10em;
+    width: 10em;
+  }
+}

@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './variables.scss';
+
+html {
+  scrollbar-color: $color-accent-2 $color-light;
+}
+
+body {
+  all: unset;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  overflow-x: none;
+}
+::-webkit-scrollbar-track {
+  background-color: $color-light;
+}
+::-webkit-scrollbar-thumb {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: $color-light;
+  background:
+    linear-gradient(to bottom, $color-accent, $color-accent-2);
+}
+
+body {
+  overflow-x: hidden;
+  background-size: cover;
+  background-image: url('../images/content/bg-triangles.svg');
+}
+
+#logo {
+  width: 12em;
+  filter: drop-shadow(0px 4px 4px black);
+}
+
+#quevdev {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+#quevdev-link {
+  border: none;
+  border-radius: 50%;
+}
+#quevdev-link:hover {
+  border: none;
+  filter: brightness(125%);
+  box-shadow: 0px 0px 8px $color-accent;
+}
+
+.inactive {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hint {
+  color: $color-accent-2;
+  font-style: italic;
+}
+.warning {
+  font-style: italic;
+  padding: 0.5em;
+  border-radius: 1em;
+  margin: 0.5em;
+  border: solid 2px rgba(255, 0, 85, 0.1);
+  background-color: rgba(255, 0, 85, 0.1);
+  color: $color-warning;
+}
+
+.unsplash-results-container {
+  background-image: url('../images/content/bg-waves.svg');
+  box-shadow: 0px 4px 4px $color-shadow;
+  border-radius: 1em;
+  padding: 0em;
+}
+.unsplash-image-container {
+  max-width: 50%;
+  border-radius: 1em;
+  padding: 0.25em;
+}
+.unsplash-image-container-2 {
+  border-radius: 1em;
+  padding: 0.25em;
+  box-shadow: 0px 4px 8px $color-shadow;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.unsplash-image-preview {
+  box-shadow: 0px 3px 3px $color-shadow;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  width: 8em;
+  height: 8em;
+}
+
+.unsplash-banner-container {
+  border-radius: 1em;
+  padding: 0.25em;
+  margin: 0.5em;
+}
+.unsplash-banner-preview {
+  box-shadow: 0px 3px 3px $color-shadow;
+  border-radius: 1em;
+  object-fit: cover;
+  height: 6em;
+  width: 18em;
+}
+
+.inactive {
+  pointer-events: none;
+}
